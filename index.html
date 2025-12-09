@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <div id="tabs">
         <button class="def-tab tab active" onclick="switchTab(event, 'book-site')">
@@ -23,47 +25,72 @@
         </button>
         <button class="tab unopen" onclick="switchTab(event, 'site-3')">
             YouTube
+            YouTube
             <span onclick="event.stopPropagation(); closeTab(this.parentElement)"> x</span>
         </button>
         <button class="tab unopen" onclick="switchTab(event, 'site-4')">
-            Link
+            Wikipedia
             <span onclick="event.stopPropagation(); closeTab(this.parentElement)"> x</span>
         </button>
         <button class="tab unopen" onclick="switchTab(event, 'site-5')">
             Best Cookbooks
             <span onclick="event.stopPropagation(); closeTab(this.parentElement)"> x</span>
         </button>
+        <button class="tab unopen" onclick="switchTab(event, 'site-6')">
+            Salmonella
+            <span onclick="event.stopPropagation(); closeTab(this.parentElement)"> x</span>
+        </button>
+        <button class="tab unopen" onclick="switchTab(event, 'site-7')">
+            Salmonella
+            <span onclick="event.stopPropagation(); closeTab(this.parentElement)"> x</span>
+        </button>
+        <button class="tab unopen" onclick="switchTab(event, 'site-8')">
+            Salmonella
+            <span onclick="event.stopPropagation(); closeTab(this.parentElement)"> x</span>
+        </button>
+        <button class="tab unopen" onclick="switchTab(event, 'site-9')">
+            Instagram
+            <span onclick="event.stopPropagation(); closeTab(this.parentElement)"> x</span>
+        </button>
     </div>
 
     <div id="book-site" class="site">
+        <div id="flash-overlay"></div>
         <div id="main-content">
             <div class="page" id="front-cover">
-                <div>
-                    <button class="fwd-btn" onclick="nextPage()">Forward</button>
+                <div class="nav-btns">
+                    <button class="nav-btn" onclick="nextPage()">Begin Reading</button>
                 </div>
                 <h1>Re[ad:member]</h1>
+                <h3>CPLT 202W Final Project</h3>
+                <p>For a complete experience, turn your audio ON.</p>
             </div>
 
-            <div class="no-click"></div>
             <div class="page" id="actual-text">
-                <div>
-                    <button class="back-btn" onclick="prevPage()">Back</button>
-                    <button class="fwd-btn" onclick="nextPage()">Forward</button>
+                <div class="nav-btns">
+                    <button class="nav-btn" onclick="nextPage()">Credits</button>
                 </div>
 
                 <div class="tt-area-1">
                     <div class="tooltip" id="widget-1">
                         <b>din·ner</b> noun<br>
-                        from Old French <i>disner</i>, meaning "to break one's fast," from Latin <i>disiejunare</i>. 
-                        It originally meant breakfast, or the first main meal eaten around midday, but changed to its current meaning 
-                        over time as eating habits shifted.  
+                        from Old French <i>disner</i>, meaning "to break one's fast," from Latin <i>disiejunare</i>.
+                        It originally meant breakfast, or the first main meal eaten around midday, but changed to its
+                        current meaning
+                        over time as eating habits shifted.
                     </div>
                     <div class="tooltip" id="widget-7">
                         Since you looked at <b>nonstick pans</b>, you might be interested in:
                         <br><br>
-                        <a href="#" onclick="openTab(document.querySelector('#tabs .tab:nth-child(4)'), 'site-3'); trackClicks(this)">Top 5 stock pots...</a><br>
-                        <a href="#" onclick="openTab(document.querySelector('#tabs .tab:nth-child(5)'), 'site-4'); trackClicks(this)">Best Stainless Steel Cookware</a><br>
-                        <a href="#" onclick="openTab(document.querySelector('#tabs .tab:nth-child(6)'), 'site-5'); trackClicks(this)">Best Cookbooks for ambit...</a><br>
+                        <a href="#"
+                            onclick="openTab(document.querySelector('#tabs .tab:nth-child(4)'), 'site-3'); trackClicks(this)">Top
+                            5 Best Stockpots</a><br>
+                        <a href="#"
+                            onclick="openTab(document.querySelector('#tabs .tab:nth-child(5)'), 'site-4'); trackClicks(this)">Cookware
+                            and Bakeware</a><br>
+                        <a href="#"
+                            onclick="openTab(document.querySelector('#tabs .tab:nth-child(6)'), 'site-5'); trackClicks(this)">Best
+                            Cookbooks for ambit...</a><br>
                     </div>
                 </div>
 
@@ -72,120 +99,169 @@
                         <img src="images/ketchup_coupon.jpg" alt="Buy One Get One Free coupon for Heinz Ketchup">
                         Ooh, nice deal!
                     </div>
+                    <div class="tooltip" id="widget-18">
+                        Or do I remember...? What have I forgotten?
+                    </div>
                 </div>
 
                 <p>
-                    On Tuesday evening, I decided to make 
-                    <a href="#" onclick="toggleTooltip('widget-1')">dinner</a> 
-                    because the 
-                    <a href="#" onclick="openTab(document.querySelector('#tabs .tab:nth-child(2)'), 'site-1'); this.textContent='migraine'; addText('widget-3')" id="widget-2">headache</a> 
-                    I'd had all afternoon finally faded enough to make the idea of chopping vegetables seem 
+                    On Tuesday evening, I decided to make
+                    <a href="#" onclick="toggleTooltip('widget-1')">dinner</a>
+                    because the
+                    <a href="#"
+                        onclick="openTab(document.querySelector('#tabs .tab:nth-child(2)'), 'site-1'); this.textContent='migraine'; addText('widget-3')"
+                        id="widget-2">headache</a>
+                    I'd had all afternoon finally faded enough to make the idea of chopping vegetables seem
                     manageable.
-                    <span id="widget-3" style="display: none;">I still wasn't sure what caused my headache, although WebMD suggested 
-                    it might be the excessive amount of caffeine that I consume, which seems plausible. I would blame that on
-                    Joyce though; if I did not have to cover for her every day, I wouldn't need to drink so much coffee.</span>  
+                    <span id="widget-3" style="display: none;">I still wasn't sure what caused my headache, although
+                        WebMD suggested
+                        it might be the excessive amount of caffeine that I consume, which seems plausible. I would
+                        blame that on
+                        Joyce though; if I did not have to cover for her every day, I wouldn't need to drink so much
+                        coffee.</span>
                 </p>
-                
-                <p>    
-                    I stood in front of the refrigerator with the door open longer than necessary, letting the cold air drift 
-                    out over my feet. Inside, things looked as they usually do: a half-used bag of baby carrots slouched sideways on the second 
-                    shelf<span class="forget-text" data-click="3">, a carton of eggs <span class="forget-text" data-click="1">from two weeks ago</span>,</span> 
-                    and a package of chicken thighs that, according to the printed label, needed to be cooked by the following day.
+
+                <p>
+                    I stood in front of the refrigerator with the door open longer than necessary, letting the cold air
+                    drift
+                    out over my feet. Inside, things looked as they usually do: a half-used bag of baby carrots slouched
+                    sideways on the second
+                    shelf<span class="forget-text" data-click="6">, a carton of eggs <span id="widget-8">from two weeks
+                            ago</span>,</span>
+                    and a package of chicken thighs that, according to the printed label, needed to be cooked by the
+                    following day.
                     There was also a bunch of green onions
-                    <span class="forget-text" data-click="2">lying diagonally across the top shelf</span>, and an assortment of bottled and jarred condiments in the door, 
-                    some nearly empty 
-                    (soy sauce<a href="#" onclick="toggleTooltip('widget-4'); addText('widget-5'); removeText(this)">, ketchup</a><span class="forget-text" data-click="2">, pesto</span>) 
-                    and other barely touched 
-                    (ranch<a href="#" id="widget-5" onclick="toggleTooltip('widget-4')" style="display: none;">, ketchup</a><span class="forget-text" data-click="3">, Tabasco</span>, 
-                    some fancy chili paste that I was gifted last Christmas). 
-                    I tapped the chicken package lightly with my finger: that would be enough of a direction for the night.
+                    <span class="forget-text" data-click="5">lying diagonally across the top shelf</span>, and an
+                    assortment of bottled and jarred condiments in the door,
+                    some nearly empty
+                    (soy sauce<a href="#" onclick="toggleTooltip('widget-4'); addText('widget-5'); removeText(this)">,
+                        ketchup</a><span class="forget-text" data-click="3">, pesto</span>)
+                    and other barely touched
+                    (ranch<a href="#" id="widget-5" onclick="toggleTooltip('widget-4')" style="display: none;">,
+                        ketchup</a><span class="forget-text" data-click="3">, Tabasco</span>,
+                    some fancy chili paste that I was gifted last Christmas).
+                    I tapped the chicken package lightly with my finger: that would be enough of a direction for the
+                    night.
                 </p>
-                
+
                 <p>
-                    The <a href="#" onclick="openTab(document.querySelector('#tabs .tab:nth-child(3)'), 'site-2'); toggleTooltip('widget-7'); trackClicks(this)" id="widget-6">pan</a> 
-                    I use for most dinners was already out on the stove because I had washed it the night before 
-                    and left it on the still-warm burner to dry. I adjusted its position and turned the dial just enough to make the ignition 
-                    click softly—one, two, three times—before the flame appeared in that small blue half-ring that always looks 
-                    slightly weaker than I expect it to. 
+                    The <a href="#"
+                        onclick="openTab(document.querySelector('#tabs .tab:nth-child(3)'), 'site-2'); toggleTooltip('widget-7'); toggleHide('widget-8'); trackClicks(this)"
+                        id="widget-6">pan</a>
+                    I use for most dinners was already out on the stove because I had washed it the night before
+                    and left it on the still-warm burner to dry. I adjusted its position and turned the dial just enough
+                    to make the ignition
+                    click softly—one, two, three times—before the flame appeared in that small blue half-ring that
+                    always looks
+                    slightly weaker than I expect it to.
                 </p>
-                
+
                 <p>
-                    The chicken thighs felt heavier than I remembered when I lifted them from the package. I trimmed a small 
-                    strip of fat with scissors because the idea of taking out the cutting board felt like too much of an escalation 
-                    for a Tuesday. The scissors stuck slightly with each snip, and I briefly wondered how many times I had trimmed 
-                    things with them without washing them properly, but not enough to stop me. I salted the chicken with the 
-                    same shaking motion I always use, a motion that never distributes the salt evenly and never bothers me 
-                    enough to correct it.
+                    The chicken thighs felt heavier than I remembered when I lifted them from the package. I trimmed a
+                    small strip of fat
+                    with scissors because the idea of taking out the cutting board felt like too much of an escalation
+                    for a Tuesday. The
+                    scissors stuck slightly with each snip, and I briefly wondered how many times I had trimmed things
+                    with them
+                    <a href="#"
+                        onclick="openTab(document.querySelector('#tabs .tab:nth-child(7)'), 'site-6'); changeText9(); addText('widget-12'); trackClicks(this)">without
+                        washing them properly</a><span id="widget-9">, but not enough to stop me.</span>
                 </p>
-                
+
                 <p>
-                    When the oil in the pan began to shimmer subtly, I laid the chicken pieces in one by one. They made the familiar 
-                    sizzling sound, though tentatively, like the chicken was not fully committed to being cooked yet. I pressed the 
-                    pieces downward with the back of a fork to encourage 
-                    contact with the pan, an action that always makes me feel strangely authoritative even though it achieves very 
-                    little. A faint smell of raw poultry and heating oil rose up, the predictable prelude to something edible.
+                    When the oil in the pan began to shimmer
+                    subtly, I laid the chicken pieces in one by one. They made a weak sizzling sound, almost a squeal, 
+                    <span id="widget-13" onclick="toggleHide('widget-13')">like the chicken was not fully committed to being cooked yet.</span> 
+                    I pressed the pieces downward with the back of a fork to encourage
+                    contact with the pan, an action that always makes me feel strangely 
+                    <a href="#" onclick="changeText13(); toggleHide('widget-13'); openTab(document.querySelector('#tabs .tab:nth-child(10)'), 'site-9'); trackClicks(this)">authoritative</a> 
+                    even though it achieves very little. A faint smell of raw poultry and heating oil rose up, 
+                    the predictable prelude to something edible.
                 </p>
-                
+
                 <p>
-                    While the chicken browned, I turned back to the refrigerator to find something to accompany it. The baby carrots 
-                    seemed like the easiest choice. They were slightly dried at the ends, with that pale, chalky look they get after 
-                    sitting too long in the cold. I poured a handful into my palm—too many! I put two back-and set them 
-                    beside the stove. I debated slicing them but concluded their current shape was acceptable. Dinner, on nights like 
+                    While the chicken browned, I turned back to the refrigerator to find something to accompany it. The
+                    baby carrots
+                    seemed like the easiest choice. They were slightly dried at the ends, with that pale, chalky look
+                    they get after
+                    sitting too long in the cold. I poured a handful into my palm—too many! I put two back-and set them
+                    beside the stove. I debated slicing them but concluded their current shape was acceptable. Dinner,
+                    on nights like
                     this, is more about assembling heat and ingredients than creating any coherent dish.
                 </p>
-                
+
                 <p>
-                    I flipped the chicken over. The cooked side looked patchy, with a golden section near the center and a paler 
-                    one near the edge. I pretended not to care about the unevenness, though I did feel a brief impulse to press down 
-                    again with the fork. Instead, I added the carrots by simply scattering them around the chicken in a loose semicircle, 
-                    like arranging props for a low-budget photograph. They rolled into place and made a small clattering sound against 
+                    I flipped the chicken over. The cooked side looked patchy, with a golden section near the center and
+                    a paler
+                    one near the edge. I pretended not to care about the unevenness, though I did feel a brief impulse
+                    to press down
+                    again with the fork. Instead, I added the carrots by simply scattering them around the chicken in a
+                    loose semicircle,
+                    like arranging props for a low-budget photograph. They rolled into place and made a small clattering
+                    sound against
                     the pan, then settled into a steady, muted hiss.
                 </p>
-                
+
                 <p>
-                    The green onions came next. I grabbed them without rinsing—an act of mild culinary rebellion—and sliced them with 
-                    the scissors directly over the pan. The pieces fell in floppy green rings, some landing neatly, others bouncing off 
-                    the chicken and falling onto the stove. One piece landed near the burner grate, and I watched it curl slightly as if 
-                    startled. I brushed it back into the pan with the handle of the fork and felt disproportionately accomplished.
+                    The green onions came next. I grabbed them without rinsing and sliced them with
+                    my <span id="widget-12">salmonella-free </span>scissors directly over the pan. The pieces fell in
+                    floppy green rings,
+                    some landing neatly, others bouncing off
+                    the chicken and falling onto the stove. One piece landed near the burner grate, and I watched it
+                    curl slightly as if
+                    startled. I brushed it back into the pan with the handle of the fork and felt disproportionately
+                    accomplished.
                 </p>
-                
+
                 <p>
-                    As everything cooked, a thin fog of steam rose and condensed on the microwave door above the stove. I always notice 
-                    this because the moisture dries unevenly, leaving streaks that I never quite manage to clean. The sound of the pan 
-                    shifted from a sharp sizzle to a more diffuse bubbling, which told me—without needing to look—that the chicken had 
-                    begun releasing its own moisture. The carrots, meanwhile, were softening in an uneven, haphazard way, some touching 
-                    the hottest parts of the pan, others drifting toward cooler spots as if trying to avoid responsibility.
+                    As everything cooked, a thin fog of steam rose and condensed on the microwave door above the stove.
+                    I always notice
+                    this because the moisture dries unevenly, leaving streaks that I never quite manage to clean. The
+                    sound of the pan
+                    shifted from a sharp sizzle to a more diffuse bubbling, which told me—without needing to look—that
+                    the chicken had
+                    begun releasing its own moisture. The carrots, meanwhile, were softening in an uneven, haphazard
+                    way, some touching
+                    the hottest parts of the pan, others drifting toward cooler spots as if trying to avoid
+                    responsibility.
                 </p>
-                
+
                 <p>
-                    When the chicken looked finished—firm, lightly browned, giving off that faint, familiar sheen—I turned off the burner 
-                    and let everything sit in the pan for a minute. I don’t know when I adopted the habit of letting food rest in the pan, 
-                    but doing so always feels faintly professional, even when the meal itself looks like something improvised by someone 
-                    halfway through moving apartments.
-                </p>
-                
-                <p>
-                    I spooned the chicken and vegetables into a bowl. The bowl was slightly too small, so one carrot rolled out and onto 
-                    the counter. I placed it back on top with the sense of restoring order, even though it made no difference to the meal. 
-                    I ate at the table without adding sauce or seasoning beyond the initial salt—partly out of laziness, partly because 
+                    When the chicken looked finished, I turned off the burner and let everything sit in the pan for a
+                    minute, before
+                    spooning the chicken and vegetables into a slightly too small bowl. One carrot rolled out and onto
+                    the counter. I placed it back on top with the sense of restoring order, even though it made no
+                    difference to the meal.
+                    I ate at the table without adding sauce or seasoning beyond the initial salt: partly out of
+                    laziness, partly because
                     none of the sauces in the fridge seemed worth opening for a meal this unambitious.
                 </p>
-                
+
                 <p>
-                    The food tasted exactly like what it was: chicken, carrots, green onion, pan heat. Nothing surprising, nothing 
-                    disappointing. It filled the space of the evening just enough to feel like dinner had occurred, without imposing any 
-                    larger meaning. When I was finished, I rinsed the bowl, washed the fork, and wiped the counter. The pan stayed on the 
-                    stove to dry, exactly as it had the night before.
+                    <span id="widget-19"><a href="#" onclick=" flash(); removeText(document.getElementById('widget-19')); addText('widget-20')">I remember the taste of the food clearly.</a> 
+                    It tasted exactly like what it was: chicken, carrots, green onion, 
+                    pan heat. Nothing surprising, nothing disappointing. But paradoxically, there's often something memorable about 
+                    the mundane, about the little things that slip through the cracks when you aren't paying attention. When I was 
+                    finished, I rinsed the bowl, washed the fork, and wiped the counter. The pan stayed on the stove to dry, exactly 
+                    as it had the night before.</span>
                 </p>
-                
+
+                <p>
+                    <a href="#" id="widget-20" onclick="flash(); removeText(this); addText('widget-19'); toggleTooltip('widget-18'); changeEffect20()" style="display: none;">Wait, 
+                    that can’t be right. I didn’t cook chicken. I remember boiling pasta. Or sitting on the couch, waiting for 
+                    delivery. The more I try to pin it down, the more none of it sounds right, like that entire night was a filler
+                    chapter in some trashy novel I read or a doomscrolling session at midnight, where all the details blur into some 
+                    vague idea or theme.</a>
+                </p>
+
                 <p>
                     And that was dinner.
                 </p>
             </div>
 
             <div class="page" id="back-cover">
-                <div>
-                    <button class="back-btn" onclick="prevPage()">Back</button>
+                <div class="nav-btns">
+                    <button class="nav-btn" onclick="prevPage()">Back to Text</button>
                 </div>
                 <p>&copy; 2025 Re[ad:member]</p>
             </div>
@@ -193,26 +269,138 @@
     </div>
 
     <div id="site-1" class="site">
-        <iframe src="https://www.webmd.com/migraines-headaches/migraines-headaches-migraines" frameborder="0"></iframe>
+        <iframe src="https://www.webmd.com/migraines-headaches/migraines-headaches-migraines" frameborder="0"
+            style="display: none;"></iframe>
     </div>
 
     <div id="site-2" class="site">
-        <iframe src="https://www.bonappetit.com/story/best-nonstick-pans" frameborder="0"></iframe>
+        <iframe src="https://www.bonappetit.com/story/best-nonstick-pans" frameborder="0"
+            style="display: none;"></iframe>
     </div>
 
     <div id="site-3" class="site">
-        <iframe src="https://www.youtube.com/watch?v=Bp1SxbosVqM" frameborder="0"></iframe>
+        <iframe src="https://www.youtube.com/embed/Bp1SxbosVqM?si=fz_erV2veEkY9oJN" width="1000px" height="500px"
+            frameborder="0" allow="accelerometer; encrypted-media;" referrerpolicy="strict-origin-when-cross-origin"
+            style="display: none;"></iframe>
     </div>
 
     <div id="site-4" class="site">
-        <iframe src="https://www.seriouseats.com/best-stainless-steel-cookware-sets-7483329" frameborder="0"></iframe>
+        <iframe src="https://en.wikipedia.org/wiki/Cookware_and_bakeware" frameborder="0"
+            style="display: none;"></iframe>
     </div>
 
     <div id="site-5" class="site">
-        <iframe src="https://www.culinarycrush.biz/all/the-best-cookbooks-for-ambitious-home-cooks-2024" frameborder="0"></iframe>
+        <iframe src="https://www.culinarycrush.biz/all/the-best-cookbooks-for-ambitious-home-cooks-2024" frameborder="0"
+            style="display: none;"></iframe>
     </div>
 
-    <script src="js/page-flip.js"></script>
+    <div id="site-6" class="site">
+        <iframe src="https://www.cdc.gov/salmonella/about/index.html" frameborder="0" style="display: none;"></iframe>
+    </div>
+
+    <div id="site-7" class="site">
+        <iframe src="" frameborder="0" style="display: none;"></iframe>
+    </div>
+
+    <div id="site-8" class="site">
+        <iframe src="" frameborder="0" style="display: none;"></iframe>
+    </div>
+
+    <div id="site-9" class="site">
+        <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/naturalhabitatshorts/?utm_source=ig_embed&amp;utm_campaign=loading"
+            data-instgrm-version="14"
+            style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 10px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px); ">
+            <div style="padding:16px;"> <a
+                    href="https://www.instagram.com/naturalhabitatshorts/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                    target="_blank">
+                    <div style=" display: flex; flex-direction: row; align-items: center;">
+                        <div
+                            style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+                        </div>
+                        <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                            <div
+                                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+                            </div>
+                            <div
+                                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 19% 0;"></div>
+                    <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px"
+                            viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg"
+                            xmlns:xlink="https://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                    <g>
+                                        <path
+                                            d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
+                                        </path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg></div>
+                    <div style="padding: 12.5% 0;"></div>
+                    <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                        <div>
+                            <div
+                                style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+                            </div>
+                            <div
+                                style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+                            </div>
+                            <div
+                                style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+                            </div>
+                        </div>
+                        <div style="margin-left: 8px;">
+                            <div
+                                style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+                            </div>
+                            <div
+                                style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+                            </div>
+                        </div>
+                        <div style="margin-left: auto;">
+                            <div
+                                style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
+                            </div>
+                            <div
+                                style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+                            </div>
+                            <div
+                                style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                        <div
+                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
+                        </div>
+                        <div
+                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+                        </div>
+                    </div>
+                </a>
+                <p
+                    style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-left:10px; margin-bottom:0; margin-top:8px; overflow:scroll; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                    <a href="https://www.instagram.com/naturalhabitatshorts/?utm_source=ig_embed&amp;utm_campaign=loading"
+                        style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;"
+                        target="_blank">Natural Habitat Shorts</a> (@<a
+                        href="https://www.instagram.com/naturalhabitatshorts/?utm_source=ig_embed&amp;utm_campaign=loading"
+                        style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;"
+                        target="_blank">naturalhabitatshorts</a>) • Instagram photos and videos</p>
+            </div>
+        </blockquote>
+    </div>
+
+    
     <script src="js/reading-problems.js"></script>
+    <script src="js/page-flip.js"></script>
+    <script async src="//www.instagram.com/embed.js"></script>
 </body>
+
 </html>

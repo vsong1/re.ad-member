@@ -1,3 +1,12 @@
+@keyframes whiteFlash {
+    0% {
+        opacity: 1; 
+    }
+    100% {
+        opacity: 0; 
+    }
+}
+
 /* Global styles */
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -7,6 +16,16 @@ body {
 
 a:visited {
     all: inherit;
+}
+
+#no-click {
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+    z-index: 1000;
 }
 
 /* Tabs styles */
@@ -45,21 +64,34 @@ a:visited {
 /* Generic site styles */
 .site {
     height: 95vh;
+    background-color: gray;
+    margin: auto;
 }
 
 iframe {
-    width: 100%;
+    width: auto;
     height: 100%;
+    margin: auto;
 }
+
 
 /* Book site styles */
 #book-site {
     background-color: gray;
 }
 
-#book-site button {
+#book-site .nav-btns {
+    display: flex;
+    flex-direction: column;
+}
+
+#book-site .nav-btn {
     margin: 2px;
-    padding: 0;
+    padding: 5px 10px;
+    border: 2px outset black;
+    border-radius: 100px;
+    align-self: flex-end;
+    background-color: transparent;
 }
 
 #main-content {
@@ -154,17 +186,21 @@ iframe {
     color: black;
 }
 
+#flash-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    background-color: white;
+    opacity: 0; 
+    pointer-events: none; 
+    z-index: 9999; 
+}
 
-
-
-/* #main-content .no-click {
-    background-color: rgba(0,0,0,0.2);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    z-index: 1000;
-} */
+.flash-active {
+    animation: whiteFlash 2s ease-out forwards; 
+}
 
 #back-cover {
     background-image: linear-gradient(to bottom right, saddlebrown, cornflowerblue);
@@ -176,3 +212,4 @@ iframe {
 #back-cover p {
     padding: 10px;
 }
+
