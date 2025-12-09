@@ -93,27 +93,30 @@ function changeText13() {
 }
 
 // widget-18
+function replaceInTextNodes(node, regex, replacement) {
+    node.childNodes.forEach(child => {
+        if (child.nodeType === Node.TEXT_NODE) {
+            child.textContent = child.textContent.replace(regex, replacement);
+        } else {
+            replaceInTextNodes(child, regex, replacement);
+        }
+    });
+}
 function toggleChicken(element) {
     const paragraphs = document.querySelectorAll('.txt-p');
 
-    const regex = new RegExp(`chicken`, 'gi');
-    const regex2 = new RegExp(`nutria`, 'gi');
-
     paragraphs.forEach(p => {
-        if (p.textContent.includes('chicken')) {
-            p.textContent = p.textContent.replace(regex, 'nutria');
+        const containsChicken = p.textContent.match(/chicken/i);
+        if (containsChicken) {
+            replaceInTextNodes(p, /chicken/gi, 'nutria');
             element.textContent = "Click to un-save the environment";
-        } else if (p.textContent.includes('nutria')) {
-            p.textContent = p.textContent.replace(regex2, 'chicken');
+        } else {
+            replaceInTextNodes(p, /nutria/gi, 'chicken');
             element.textContent = "Click to save the environment";
         }
     });
 
 }
-
-// Example usage:
-// This will replace all occurrences of "old_word" with "new_word" in all <p> tags
-replaceWordInParagraphs('old_word', 'new_word');
 
 // widget-20
 function changeEffect20() {
