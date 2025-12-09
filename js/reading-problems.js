@@ -92,6 +92,29 @@ function changeText13() {
     "like that traumatized hedgehog with commitment issues in a educational video I watched at one point."
 }
 
+// widget-18
+function toggleChicken(element) {
+    const paragraphs = document.querySelectorAll('.txt-p');
+
+    const regex = new RegExp(`chicken`, 'gi');
+    const regex2 = new RegExp(`nutria`, 'gi');
+
+    paragraphs.forEach(p => {
+        if (p.textContent.includes('chicken')) {
+            p.textContent = p.textContent.replace(regex, 'nutria');
+            element.textContent = "Click to un-save the environment";
+        } else if (p.textContent.includes('nutria')) {
+            p.textContent = p.textContent.replace(regex2, 'chicken');
+            element.textContent = "Click to save the environment";
+        }
+    });
+
+}
+
+// Example usage:
+// This will replace all occurrences of "old_word" with "new_word" in all <p> tags
+replaceWordInParagraphs('old_word', 'new_word');
+
 // widget-20
 function changeEffect20() {
     document.getElementById('widget-20').onclick = "removeText(this); addText('widget-19');"

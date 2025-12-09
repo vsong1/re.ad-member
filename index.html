@@ -25,7 +25,6 @@
         </button>
         <button class="tab unopen" onclick="switchTab(event, 'site-3')">
             YouTube
-            YouTube
             <span onclick="event.stopPropagation(); closeTab(this.parentElement)"> x</span>
         </button>
         <button class="tab unopen" onclick="switchTab(event, 'site-4')">
@@ -41,7 +40,7 @@
             <span onclick="event.stopPropagation(); closeTab(this.parentElement)"> x</span>
         </button>
         <button class="tab unopen" onclick="switchTab(event, 'site-7')">
-            Salmonella
+            Smithsonian Mag
             <span onclick="event.stopPropagation(); closeTab(this.parentElement)"> x</span>
         </button>
         <button class="tab unopen" onclick="switchTab(event, 'site-8')">
@@ -92,6 +91,9 @@
                             onclick="openTab(document.querySelector('#tabs .tab:nth-child(6)'), 'site-5'); trackClicks(this)">Best
                             Cookbooks for ambit...</a><br>
                     </div>
+                    <div class="tooltip" id="widget-16">
+                        <button onclick="toggleChicken(this)">Click to save the environment</button>
+                    </div>
                 </div>
 
                 <div class="tt-area-2">
@@ -104,7 +106,7 @@
                     </div>
                 </div>
 
-                <p>
+                <p class="txt-p">
                     On Tuesday evening, I decided to make
                     <a href="#" onclick="toggleTooltip('widget-1')">dinner</a>
                     because the
@@ -121,7 +123,7 @@
                         coffee.</span>
                 </p>
 
-                <p>
+                <p class="txt-p">
                     I stood in front of the refrigerator with the door open longer than necessary, letting the cold air
                     drift
                     out over my feet. Inside, things looked as they usually do: a half-used bag of baby carrots slouched
@@ -135,7 +137,7 @@
                     assortment of bottled and jarred condiments in the door,
                     some nearly empty
                     (soy sauce<a href="#" onclick="toggleTooltip('widget-4'); addText('widget-5'); removeText(this)">,
-                        ketchup</a><span class="forget-text" data-click="3">, pesto</span>)
+                        ketchup</a><span class="forget-text" data-click="7">, pesto</span>)
                     and other barely touched
                     (ranch<a href="#" id="widget-5" onclick="toggleTooltip('widget-4')" style="display: none;">,
                         ketchup</a><span class="forget-text" data-click="3">, Tabasco</span>,
@@ -144,7 +146,7 @@
                     night.
                 </p>
 
-                <p>
+                <p class="txt-p">
                     The <a href="#"
                         onclick="openTab(document.querySelector('#tabs .tab:nth-child(3)'), 'site-2'); toggleTooltip('widget-7'); toggleHide('widget-8'); trackClicks(this)"
                         id="widget-6">pan</a>
@@ -156,7 +158,7 @@
                     slightly weaker than I expect it to.
                 </p>
 
-                <p>
+                <p class="txt-p">
                     The chicken thighs felt heavier than I remembered when I lifted them from the package. I trimmed a
                     small strip of fat
                     with scissors because the idea of taking out the cutting board felt like too much of an escalation
@@ -168,7 +170,7 @@
                         washing them properly</a><span id="widget-9">, but not enough to stop me.</span>
                 </p>
 
-                <p>
+                <p class="txt-p">
                     When the oil in the pan began to shimmer
                     subtly, I laid the chicken pieces in one by one. They made a weak sizzling sound, almost a squeal, 
                     <span id="widget-13" onclick="toggleHide('widget-13')">like the chicken was not fully committed to being cooked yet.</span> 
@@ -179,54 +181,38 @@
                     the predictable prelude to something edible.
                 </p>
 
-                <p>
-                    While the chicken browned, I turned back to the refrigerator to find something to accompany it. The
-                    baby carrots
-                    seemed like the easiest choice. They were slightly dried at the ends, with that pale, chalky look
-                    they get after
-                    sitting too long in the cold. I poured a handful into my palm—too many! I put two back-and set them
-                    beside the stove. I debated slicing them but concluded their current shape was acceptable. Dinner,
-                    on nights like
-                    this, is more about assembling heat and ingredients than creating any coherent dish.
+                <audio id="widget-14" src="audio/coffee_shop.m4a"></audio>
+                <p class="txt-p">
+                    While the chicken browned, I wandered over to the section of my apartment designated as the living room
+                    and lean over the delapidated couch to grab the remote to the TV. Static fills the room, which I ignored in favor of switching to the
+                    streaming services and began lazily searching for a show that seemed interesting. The sizzling of the chicken behind me
+                    jolted me out of my scrolling daze as I was reminded of my commitment to making dinner that night. I select a show at random and 
+                    toss the remote in the 
+                    <a href="#" onclick="document.getElementById('widget-14').play(); addText('widget-15')">general direction of the couch</a> 
+                    before hurrying back to tend to my attempt at dinner. 
                 </p>
 
-                <p>
+                <p class="txt-p">
                     I flipped the chicken over. The cooked side looked patchy, with a golden section near the center and
-                    a paler
-                    one near the edge. I pretended not to care about the unevenness, though I did feel a brief impulse
-                    to press down
-                    again with the fork. Instead, I added the carrots by simply scattering them around the chicken in a
-                    loose semicircle,
-                    like arranging props for a low-budget photograph. They rolled into place and made a small clattering
-                    sound against
-                    the pan, then settled into a steady, muted hiss.
+                    a paler one near the edge. I pretended not to care about the unevenness, though I did feel a brief impulse
+                    to press down again with the fork. <span id="widget-15" style="display: none;">The random chatter of the 
+                    characters in whatever show I had put on reminded me of the coffee shop I like to go to on lunch breaks. The thought 
+                    made me itch for a cup of coffee with my chicken, but something in the back of my mind reminded me that was both a terrible 
+                    idea and potentially a sign of caffeine addiction.</span>
                 </p>
 
-                <p>
-                    The green onions came next. I grabbed them without rinsing and sliced them with
-                    my <span id="widget-12">salmonella-free </span>scissors directly over the pan. The pieces fell in
-                    floppy green rings,
-                    some landing neatly, others bouncing off
-                    the chicken and falling onto the stove. One piece landed near the burner grate, and I watched it
-                    curl slightly as if
-                    startled. I brushed it back into the pan with the handle of the fork and felt disproportionately
-                    accomplished.
+                <p class="txt-p">
+                    Next, I needed to chop the green onions. I grabbed them without rinsing and sliced them with
+                    my <span id="widget-12"><i>salmonella-free</i> </span>scissors directly over the pan. I had the childish urge to imagine them as 
+                    projectiles falling from 
+                    <a href="#" onclick="openTab(document.querySelector('#tabs .tab:nth-child(8)'), 'site-7'); toggleTooltip('widget-16'); trackClicks(this)">an invading alien spaceship.</a>
+                    The pieces fell in uneven
+                    floppy green rings, some landing neatly and shrinking into the chicken, others bouncing off the chicken and falling onto the stove. One piece 
+                    landed near the burner grate, and I watched it curl in on itself. I brushed it back into the pan with the 
+                    handle of the fork and felt disproportionately accomplished.
                 </p>
 
-                <p>
-                    As everything cooked, a thin fog of steam rose and condensed on the microwave door above the stove.
-                    I always notice
-                    this because the moisture dries unevenly, leaving streaks that I never quite manage to clean. The
-                    sound of the pan
-                    shifted from a sharp sizzle to a more diffuse bubbling, which told me—without needing to look—that
-                    the chicken had
-                    begun releasing its own moisture. The carrots, meanwhile, were softening in an uneven, haphazard
-                    way, some touching
-                    the hottest parts of the pan, others drifting toward cooler spots as if trying to avoid
-                    responsibility.
-                </p>
-
-                <p>
+                <p class="txt-p">
                     When the chicken looked finished, I turned off the burner and let everything sit in the pan for a
                     minute, before
                     spooning the chicken and vegetables into a slightly too small bowl. One carrot rolled out and onto
@@ -237,16 +223,15 @@
                     none of the sauces in the fridge seemed worth opening for a meal this unambitious.
                 </p>
 
-                <p>
+                <p class="txt-p">
                     <span id="widget-19"><a href="#" onclick=" flash(); removeText(document.getElementById('widget-19')); addText('widget-20')">I remember the taste of the food clearly.</a> 
-                    It tasted exactly like what it was: chicken, carrots, green onion, 
-                    pan heat. Nothing surprising, nothing disappointing. But paradoxically, there's often something memorable about 
-                    the mundane, about the little things that slip through the cracks when you aren't paying attention. When I was 
-                    finished, I rinsed the bowl, washed the fork, and wiped the counter. The pan stayed on the stove to dry, exactly 
-                    as it had the night before.</span>
+                    It tasted exactly like what it was: chicken, green onion, pan heat. Nothing surprising, nothing disappointing. 
+                    Paradoxically, there's often something memorable about the mundane, about the little things that slip through the 
+                    cracks when you aren't paying attention. When I was finished, I rinsed the bowl, washed the fork, and wiped the
+                    counter. The pan stayed on the stove to dry, exactly as it had the night before.</span>
                 </p>
 
-                <p>
+                <p class="txt-p">
                     <a href="#" id="widget-20" onclick="flash(); removeText(this); addText('widget-19'); toggleTooltip('widget-18'); changeEffect20()" style="display: none;">Wait, 
                     that can’t be right. I didn’t cook chicken. I remember boiling pasta. Or sitting on the couch, waiting for 
                     delivery. The more I try to pin it down, the more none of it sounds right, like that entire night was a filler
@@ -254,7 +239,7 @@
                     vague idea or theme.</a>
                 </p>
 
-                <p>
+                <p class="txt-p">
                     And that was dinner.
                 </p>
             </div>
@@ -299,7 +284,7 @@
     </div>
 
     <div id="site-7" class="site">
-        <iframe src="" frameborder="0" style="display: none;"></iframe>
+        <embed src="images/nutria.pdf#toolbar=0&pagemode=none" type="application/pdf" width="100%" height="95%">
     </div>
 
     <div id="site-8" class="site">
