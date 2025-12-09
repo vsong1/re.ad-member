@@ -1,48 +1,178 @@
+/* Global styles */
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+    scrollbar-color: transparent transparent;
+}
+
+a:visited {
+    all: inherit;
+}
+
+/* Tabs styles */
+#tabs {
+    display: flex;
+    gap: 0.2em;
+    height: 5vh;
+    border-bottom: 10px solid gray;
+}
+
+#tabs .tab {
+    padding: 0.5em 1em;
+    border-radius: 10px 10px 0 0;
+    border: none;
+    font-size: 14px;
+    background-color: lightgray; 
+}
+
+#tabs .tab span {
+    font-family: Arial, Helvetica, sans-serif;
+    color: crimson;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 0 0 0.5em;
+    pointer-events: auto;
+}
+
+#tabs .tab.active {
+    background-color: gray;
+}
+
+#tabs .tab.unopen {
+    display: none;
+}
+
+/* Generic site styles */
+.site {
+    height: 95vh;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Book site styles */
+#book-site {
+    background-color: gray;
+}
+
+#book-site button {
+    margin: 2px;
+    padding: 0;
 }
 
 #main-content {
-    background-image: url("../images/paper_bkgd.jpg");   
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    perspective: 1500px;
+    perspective: 2000px;
     position: relative;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: 95vh;
     overflow: hidden;
 }
 
 .page {
+    box-sizing: border-box;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     padding: 1em;
-    width: 100%;
-    height: 100%;
+    width: 1200px;
+    height: 600px;
+    margin: auto;
+    border: 2px solid slategray;
+    border-radius: 1em;
     backface-visibility: hidden; 
-    transform-origin: center;
-    transition: transform 0.8s ease;
+    transform-origin: top;
+    transition: transform 2s ease-out;
+
+    scrollbar-gutter: none;
+    overflow-y: auto;
 }
 
 .flipped {
-  transform: rotateY(-180deg);
+    transform: translate(-50%, -50%) rotateX(180deg);
+    transition: transform 2s ease-in;
 }
 
 #front-cover {
-    background-color: saddlebrown;
+    background-image: linear-gradient(to bottom right, saddlebrown, cornflowerblue);
     color: white;
+    box-sizing: border-box;
     z-index: 3;
 }
 
+#front-cover h1 {
+    margin: 180px auto;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-size: 5em;
+    opacity: 1;
+    transition: opacity 5s linear;
+}
+
 #actual-text {
-    background-image: url("../images/paper_bkgd.jpg");   
+    background-image: url("../images/paper_bkgd.jpg");  
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 2;
 }
+ 
+#actual-text p {
+    width: 60%;
+    margin: 1em auto;
+    user-select: none;
+}
+
+#actual-text .tooltip {
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 180px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#actual-text .tooltip img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+#actual-text .tooltip.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#actual-text p .hide {
+    filter: blur(3px);
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+/* #main-content .no-click {
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 1000;
+} */
 
 #back-cover {
-    background-color: brown;
+    background-image: linear-gradient(to bottom right, saddlebrown, cornflowerblue);
     color: white;
+    box-sizing: border-box;
     z-index: 1;
+}
+
+#back-cover p {
+    padding: 10px;
 }
